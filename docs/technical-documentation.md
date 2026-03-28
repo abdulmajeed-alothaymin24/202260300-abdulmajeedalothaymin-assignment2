@@ -2,13 +2,14 @@
 
 ## 1. Project Overview
 
-This project is a responsive personal portfolio web application built using HTML, CSS, and JavaScript.  
-It serves as the foundation for a larger professional portfolio that will be expanded in future assignments.
+This project is a responsive personal portfolio web application built using HTML, CSS, and JavaScript.
+It was started in Assignment 1 and extended in Assignment 2 with interactive features, form validation, and animations.
 
 The application focuses on:
 - Clean structure
 - Responsive layout
 - Theme customization
+- Dynamic interactivity
 - Organized file architecture
 
 ---
@@ -62,11 +63,11 @@ The CSS file is organized into logical sections:
 3. Layout  
    Flexbox and CSS Grid are used to control alignment and structure.
 
-4. Components  
-   Styles for navbar, hero, buttons, project cards, and contact form.
+4. Components
+   Styles for each section in page order: navbar, theme toggle, hero, buttons, skills, projects, and contact. Each component's animations and interactive states are defined alongside it.
 
-5. Responsive Rules  
-   Media queries adjust layout for screens under 900px.
+5. Responsive Rules
+   Media queries adjust layout for screens under 900px and 600px.
 
 ---
 
@@ -90,16 +91,28 @@ The navigation bar uses slight transparency and backdrop blur to create depth an
 
 ## 6. JavaScript Logic
 
-The JavaScript file implements a theme toggle system:
+The JavaScript file is organized into three independent blocks:
 
+**Theme Toggle (Assignment 1)**
 - Detects previously saved theme using `localStorage`
 - Applies saved theme on page load
 - Toggles `dark` class on the `<body>` element
 - Saves updated theme preference
 
-This ensures persistent theme preference across sessions.
+**Project Filter (Assignment 2)**
+- Reads `data-category` attribute from each project card
+- On filter button click, removes the `hidden` class from matching cards and adds it to non-matching ones
+- Updates the active button style
+- Shows an empty-state message if no cards match the selected category
 
-Event handling is implemented using `addEventListener`, and the logic is kept minimal for clarity.
+**Contact Form Validation (Assignment 2)**
+- Intercepts form submission with `e.preventDefault()`
+- Validates name (not empty), email (regex pattern), and message (not empty)
+- Adds `input-error` class to failing fields to highlight them in red
+- Displays a success banner on valid submission and resets the form
+- Success banner auto-hides after 5 seconds using `setTimeout`
+
+Event handling throughout uses `addEventListener`, and the logic is kept straightforward for clarity.
 
 ---
 
@@ -129,15 +142,13 @@ Testing was performed using:
 
 ## 9. Known Limitations
 
-- The contact form does not include backend processing.
-- No advanced animations or frameworks are used.
-- The portfolio content is currently static.
+- The contact form does not include backend processing (client-side validation only).
+- The portfolio content is manually updated; no CMS is used.
 
 ---
 
 ## 10. Future Improvements
 
-- Add project filtering functionality.
-- Implement simple animations.
 - Deploy using GitHub Pages.
 - Add backend functionality for the contact form.
+- Expand project cards with live demo and source links.

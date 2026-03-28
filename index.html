@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abdulmajeed Alothaymin | Portfolio</title>
+  <meta name="description" content="Portfolio of Abdulmajeed Alothaymin — Software Engineering student at KFUPM specializing in system design, databases, and low-level systems." />
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -53,12 +54,13 @@
     </div>
   </header>
   <!-- ================= HERO ================= -->
-  <section class="hero">
+  <section id="hero" class="hero">
     <div class="container hero-container">
       <div class="hero-text">
+        <p class="hero-role">Software Engineering Student · KFUPM</p>
         <h1>Abdulmajeed Alothaymin</h1>
         <p>
-          Software Engineering student focused on structured system design, scalable architectures, and disciplined development practices.
+          Building structured systems, writing clean code, and learning something new every semester.
         </p>
       </div>
     </div>
@@ -78,22 +80,39 @@
       </p>
     </div>
   </section>
-  <!-- ================= SKILLS (Optional, simple) ================= -->
+  <!-- ================= SKILLS ================= -->
   <section id="skills" class="section-block">
     <div class="container">
       <h2>Technical Skills</h2>
-      <p>
-        Python • Java • C • SQL • HTML • CSS • JavaScript • Git • GitHub • UML • Figma • Flask (learning) • React (learning)
-      </p>
+      <div class="skills-groups">
+        <div class="skills-group">
+          <h3 class="skills-group-title">Proficient</h3>
+          <p>Python • Java • C • SQL • HTML • CSS • JavaScript • Git • GitHub • UML • Figma</p>
+        </div>
+        <div class="skills-group">
+          <h3 class="skills-group-title">Currently Learning</h3>
+          <p>React • Node.js • Express • MongoDB</p>
+        </div>
+      </div>
     </div>
   </section>
   <!-- ================= PROJECTS ================= -->
   <section id="projects" class="section-block section-alt">
     <div class="container">
       <h2>Projects</h2>
+
+      <p class="section-subtitle">Click a category to filter projects</p>
+      <!-- Filter Buttons -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="design">Design & Systems</button>
+        <button class="filter-btn" data-filter="database">Database</button>
+        <button class="filter-btn" data-filter="systems">Systems</button>
+      </div>
+
       <div class="projects-grid">
         <!-- Project 1 -->
-        <div class="project-card">
+        <div class="project-card" data-category="design">
           <img
             class="project-thumb"
             alt="Project placeholder image"
@@ -108,10 +127,13 @@
             <li>UML modeling (use case, sequence)</li>
             <li>Structured engineering deliverables</li>
           </ul>
-          <span class="tech-stack">UML • SDLC • Documentation</span>
+          <div class="card-footer">
+            <span class="tech-stack">UML • SDLC • Documentation</span>
+            <a href="https://github.com/abdulmajeed-alothaymin24" target="_blank" rel="noopener noreferrer" class="card-link">View on GitHub →</a>
+          </div>
         </div>
         <!-- Project 2 -->
-        <div class="project-card">
+        <div class="project-card" data-category="design">
           <img
             class="project-thumb"
             alt="Project placeholder image"
@@ -126,10 +148,13 @@
             <li>Functional &amp; non-functional requirements</li>
             <li>Traceability + change control analysis</li>
           </ul>
-          <span class="tech-stack">SRS • Use Cases • RE Process</span>
+          <div class="card-footer">
+            <span class="tech-stack">SRS • Use Cases • RE Process</span>
+            <a href="https://github.com/abdulmajeed-alothaymin24" target="_blank" rel="noopener noreferrer" class="card-link">View on GitHub →</a>
+          </div>
         </div>
         <!-- Project 3 -->
-        <div class="project-card">
+        <div class="project-card" data-category="database">
           <img
             class="project-thumb"
             alt="Project placeholder image"
@@ -144,10 +169,13 @@
             <li>Normalization + integrity constraints</li>
             <li>Flask integration for basic operations</li>
           </ul>
-          <span class="tech-stack">SQL • EER • Flask</span>
+          <div class="card-footer">
+            <span class="tech-stack">SQL • EER • Flask</span>
+            <a href="https://github.com/abdulmajeed-alothaymin24" target="_blank" rel="noopener noreferrer" class="card-link">View on GitHub →</a>
+          </div>
         </div>
         <!-- Project 4 -->
-        <div class="project-card">
+        <div class="project-card" data-category="systems">
           <img
             class="project-thumb"
             alt="Project placeholder image"
@@ -162,9 +190,14 @@
             <li>Kernel-level threading concepts</li>
             <li>Basic file system components</li>
           </ul>
-          <span class="tech-stack">C • Kernel • OS Concepts</span>
+          <div class="card-footer">
+            <span class="tech-stack">C • Kernel • OS Concepts</span>
+            <a href="https://github.com/abdulmajeed-alothaymin24" target="_blank" rel="noopener noreferrer" class="card-link">View on GitHub →</a>
+          </div>
         </div>
 
+        <!-- Empty state message -->
+        <p class="empty-state" id="no-projects">No projects in this category yet.</p>
       </div>
     </div>
   </section>
@@ -173,15 +206,54 @@
     <div class="container">
       <h2>Contact</h2>
       <p class="section-subtitle">Open to opportunities and project discussions</p>
+      <div class="contact-links">
+        <a href="mailto:abdulmajeed-alothaymin@outlook.com" class="contact-link">
+          <!-- Email icon -->
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+              d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+              points="22,6 12,13 2,6"/>
+          </svg>
+          abdulmajeed-alothaymin@outlook.com
+        </a>
+        <a href="https://github.com/abdulmajeed-alothaymin24" target="_blank" rel="noopener noreferrer" class="contact-link">
+          <!-- GitHub icon -->
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+          </svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/abdulmajeed-alothaymin-740a1828a/" target="_blank" rel="noopener noreferrer" class="contact-link">
+          <!-- LinkedIn icon -->
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+              d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+              x="2" y="9" width="4" height="12"/>
+            <circle stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+              cx="4" cy="4" r="2"/>
+          </svg>
+          LinkedIn
+        </a>
+      </div>
 
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" rows="5" required></textarea>
+      <form class="contact-form" id="contact-form">
+        <label for="contact-name">Name</label>
+        <input type="text" id="contact-name" name="name" placeholder="Your Name" />
+        <label for="contact-email">Email</label>
+        <input type="email" id="contact-email" name="email" placeholder="your@email.com" />
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="message" placeholder="Write your message here..." rows="5"></textarea>
         <button type="submit" class="btn">Send Message</button>
       </form>
+      <!-- Feedback messages -->
+      <p class="form-feedback form-success" id="form-success">Thanks! This form is for demo purposes — reach me directly at abdulmajeed-alothaymin@outlook.com.</p>
+      <p class="form-feedback form-error" id="form-error">Please fill in all fields correctly before sending.</p>
     </div>
   </section>
+  <!-- ================= FOOTER ================= -->
   <footer class="footer">
     <div class="container">
       <p>© 2026 Abdulmajeed Alothaymin. All rights reserved.</p>

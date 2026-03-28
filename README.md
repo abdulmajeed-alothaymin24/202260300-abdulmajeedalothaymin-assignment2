@@ -36,7 +36,7 @@ The website includes:
 ## How to Run the Project Locally
 
 1. Clone the repository:
-git clone https://github.com/your-username/id-name-assignment1.git
+git clone https://github.com/abdulmajeed-alothaymin24/202260300-abdulmajeedalothaymin-assignment2.git
 
 2. Open the project folder.
 

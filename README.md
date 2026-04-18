@@ -6,18 +6,20 @@ This project is a responsive personal portfolio web application built using HTML
 It is built on top of Assignment 1 with added interactivity, form validation, and animations.
 
 The website includes:
-- About Me section
+- About Me section with two-column layout and stat cards
 - Projects section with category filter
 - Contact form with validation and feedback messages
 - Dark/Light theme toggle feature
-- Fade-in animation on page load
+- Scroll-triggered fade-in animations per section
+- Step-by-step user navigation guide (collapsible)
+- Hero section with CTA buttons and dot grid background
 
 ---
 
 ## Technologies Used
 - HTML5
-- CSS3 (Flexbox & Grid)
-- JavaScript (ES6)
+- CSS3 (Flexbox, Grid, CSS custom properties, IntersectionObserver animations)
+- JavaScript (ES6, IntersectionObserver API)
 - LocalStorage API
 
 ---
@@ -27,8 +29,14 @@ The website includes:
 - Dark/Light theme toggle with persistent preference (localStorage)
 - Project filter by category (All / Design & Systems / Database / Systems)
 - Contact form with client-side validation and success/error feedback
-- Hero section fade-in animation on page load
-- Clean and structured layout
+- Hero section with CTA buttons ("View Projects" / "Get in Touch") and dot grid background
+- About section with two-column layout: bio text + 4 stat highlight cards
+- Technical skills displayed as interactive pill badges (proficient vs. learning)
+- Section headings with eyebrow labels and accent underlines
+- Scroll-triggered fade-in animations using IntersectionObserver
+- Navbar active link highlighting as you scroll between sections
+- 3-column project grid on wide screens (≥ 1024px)
+- Collapsible step-by-step site navigation guide in the hero
 - Organized folder structure
 
 ---
@@ -55,4 +63,6 @@ A detailed explanation is provided in `docs/ai-usage-report.md`.
 
 ## Future Improvements
 - Deploy using GitHub Pages
+- Add project detail modals or individual project pages
+- Animate skill pills on scroll reveal
 

@@ -62,36 +62,98 @@
         <p>
           Building structured systems, writing clean code, and learning something new every semester.
         </p>
+        <!-- CTA Buttons -->
+        <div class="hero-cta">
+          <a href="#projects" class="btn">View Projects</a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+        <!-- Site Guide -->
+        <div class="site-guide">
+          <button class="site-guide__toggle" id="guide-toggle" aria-expanded="false" type="button">
+            How to navigate this site <span class="guide-arrow" aria-hidden="true">▾</span>
+          </button>
+          <ol class="site-guide__steps" id="guide-steps" hidden>
+            <li><strong>Navbar:</strong> Use the links at the top — <em>About</em>, <em>Skills</em>, <em>Projects</em>, <em>Contact</em> — to jump directly to any section.</li>
+            <li><strong>Theme:</strong> Toggle the sun/moon switch in the top-right corner to switch between light and dark mode. Your preference is saved automatically.</li>
+            <li><strong>Projects:</strong> Click one of the category buttons (Design &amp; Systems, Database, Systems) to filter the project cards. Click <em>All</em> to reset. Then click <em>View on GitHub →</em> on any card to open its repository.</li>
+            <li><strong>Contact form:</strong> Fill in your name, email address, and message, then click <em>Send Message</em>. All three fields are required — any missing or invalid field will be highlighted in red. A confirmation message appears on success.</li>
+          </ol>
+        </div>
       </div>
     </div>
   </section>
   <!-- ================= ABOUT ================= -->
   <section id="about" class="section-block section-alt">
     <div class="container">
-      <h2>About Me</h2>
-      <p>
-        Software Engineering student focused on building structured, 
-        scalable systems using disciplined engineering practices. 
-        Experienced in system design, requirements engineering, database modeling, 
-        and low-level systems concepts through hands-on academic projects. 
-        Skilled in applying SDLC principles, UML modeling, relational schema design, 
-        and structured documentation to deliver maintainable and well-architected solutions. 
-        Strong foundation in problem-solving, analytical thinking, and technical communication.
-      </p>
+      <div class="section-heading">
+        <span class="section-eyebrow">Who I Am</span>
+        <h2>About Me</h2>
+      </div>
+      <div class="about-layout">
+        <div class="about-text">
+          <p>
+            Software Engineering student focused on building structured,
+            scalable systems using disciplined engineering practices.
+            Experienced in system design, requirements engineering, database modeling,
+            and low-level systems concepts through hands-on academic projects.
+            Skilled in applying SDLC principles, UML modeling, relational schema design,
+            and structured documentation to deliver maintainable and well-architected solutions.
+            Strong foundation in problem-solving, analytical thinking, and technical communication.
+          </p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-number">4+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">3+</span>
+            <span class="stat-label">Years of Study</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">11</span>
+            <span class="stat-label">Tech Skills</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">KFUPM</span>
+            <span class="stat-label">University</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <!-- ================= SKILLS ================= -->
   <section id="skills" class="section-block">
     <div class="container">
-      <h2>Technical Skills</h2>
+      <div class="section-heading">
+        <span class="section-eyebrow">What I Know</span>
+        <h2>Technical Skills</h2>
+      </div>
       <div class="skills-groups">
         <div class="skills-group">
           <h3 class="skills-group-title">Proficient</h3>
-          <p>Python • Java • C • SQL • HTML • CSS • JavaScript • Git • GitHub • UML • Figma</p>
+          <div class="skill-pills">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">C</span>
+            <span class="skill-pill">SQL</span>
+            <span class="skill-pill">HTML</span>
+            <span class="skill-pill">CSS</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">Git</span>
+            <span class="skill-pill">GitHub</span>
+            <span class="skill-pill">UML</span>
+            <span class="skill-pill">Figma</span>
+          </div>
         </div>
         <div class="skills-group">
           <h3 class="skills-group-title">Currently Learning</h3>
-          <p>React • Node.js • Express • MongoDB</p>
+          <div class="skill-pills">
+            <span class="skill-pill skill-pill--learning">React</span>
+            <span class="skill-pill skill-pill--learning">Node.js</span>
+            <span class="skill-pill skill-pill--learning">Express</span>
+            <span class="skill-pill skill-pill--learning">MongoDB</span>
+          </div>
         </div>
       </div>
     </div>
@@ -99,9 +161,16 @@
   <!-- ================= PROJECTS ================= -->
   <section id="projects" class="section-block section-alt">
     <div class="container">
-      <h2>Projects</h2>
+      <div class="section-heading">
+        <span class="section-eyebrow">My Work</span>
+        <h2>Projects</h2>
+      </div>
 
-      <p class="section-subtitle">Click a category to filter projects</p>
+      <ol class="section-steps">
+        <li>Click a category button below to filter projects by type.</li>
+        <li>Browse the cards — each one lists the tools and deliverables involved.</li>
+        <li>Click <strong>View on GitHub →</strong> on any card to open its repository.</li>
+      </ol>
       <!-- Filter Buttons -->
       <div class="filter-bar">
         <button class="filter-btn active" data-filter="all">All</button>
@@ -204,8 +273,17 @@
   <!-- ================= CONTACT ================= -->
   <section id="contact" class="section-block">
     <div class="container">
-      <h2>Contact</h2>
+      <div class="section-heading">
+        <span class="section-eyebrow">Let's Talk</span>
+        <h2>Contact</h2>
+      </div>
       <p class="section-subtitle">Open to opportunities and project discussions</p>
+      <ol class="section-steps">
+        <li>Reach out directly via email, GitHub, or LinkedIn using the links below.</li>
+        <li>Or use the form: fill in your <strong>name</strong>, <strong>email</strong>, and <strong>message</strong>.</li>
+        <li>Click <strong>Send Message</strong>. Missing or invalid fields will be highlighted in red.</li>
+        <li>A confirmation appears on success — note this is a demo form; for a guaranteed reply use email directly.</li>
+      </ol>
       <div class="contact-links">
         <a href="mailto:abdulmajeed-alothaymin@outlook.com" class="contact-link">
           <!-- Email icon -->

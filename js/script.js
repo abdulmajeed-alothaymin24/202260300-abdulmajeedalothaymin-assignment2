@@ -1,4 +1,65 @@
 // ============================================
+// SCROLL FADE-IN
+// ============================================
+
+const fadeSections = document.querySelectorAll(".section-block");
+
+fadeSections.forEach((section) => section.classList.add("fade-hidden"));
+
+const fadeObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove("fade-hidden");
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.1 }
+);
+
+fadeSections.forEach((section) => fadeObserver.observe(section));
+
+// ============================================
+// NAVBAR ACTIVE LINK
+// ============================================
+
+const navLinks = document.querySelectorAll(".nav-links a");
+const navSections = document.querySelectorAll("section[id]");
+
+const navObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        navLinks.forEach((link) => link.classList.remove("active-link"));
+        const match = document.querySelector(
+          `.nav-links a[href="#${entry.target.id}"]`
+        );
+        if (match) match.classList.add("active-link");
+      }
+    });
+  },
+  { rootMargin: "-30% 0px -60% 0px", threshold: 0 }
+);
+
+navSections.forEach((section) => navObserver.observe(section));
+
+// ============================================
+// SITE GUIDE TOGGLE
+// ============================================
+
+const guideToggle = document.getElementById("guide-toggle");
+const guideSteps  = document.getElementById("guide-steps");
+
+if (guideToggle && guideSteps) {
+  guideToggle.addEventListener("click", () => {
+    const isOpen = guideToggle.getAttribute("aria-expanded") === "true";
+    guideToggle.setAttribute("aria-expanded", String(!isOpen));
+    guideSteps.hidden = isOpen;
+  });
+}
+
+// ============================================
 // THEME TOGGLE
 // ============================================
 
